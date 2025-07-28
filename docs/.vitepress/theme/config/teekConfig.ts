@@ -16,7 +16,7 @@ export const teekDocConfig: TeekConfig = {
     },
     copyright: {
       createYear: 2025,
-      suffix: "One Blog",
+      suffix: "远祥阁",
     },
   },  
 
@@ -33,7 +33,7 @@ const teekBlogCommonConfig: TeekConfig = {
   vpHome: false,
 
   banner: {
-    name: "One Blog 🎉", // Banner 标题，默认读取 vitepress 的 title 属性
+    name: "远祥阁 🎉", // Banner 标题，默认读取 vitepress 的 title 属性
     pureBgColor: "#28282d", // Banner 背景色。bgStyle 为 pure 时生效
     imgSrc: Wallpaper,
     descStyle: "types",
@@ -61,7 +61,7 @@ const teekBlogCommonConfig: TeekConfig = {
 
   
   docAnalysis: {
-    createTime: "2025-03-23",
+    createTime: "2025-07-28",
     statistics: {
       provider: "busuanzi",
     },
@@ -137,7 +137,7 @@ const teekBlogCommonConfig: TeekConfig = {
 export const teekBlogConfig: TeekConfig = {
   ...teekBlogCommonConfig,
   banner: {
-    name: "🎉 One Blog",
+    name: "🎉 远祥阁",
     description: "故事由我书写，旅程由你见证，传奇由她聆听 —— 来自 Young Kbt",
     bgStyle: "partImg",
   },
@@ -147,7 +147,7 @@ export const teekBlogConfig: TeekConfig = {
 export const teekBlogParkConfig: TeekConfig = {
   ...teekBlogCommonConfig,
   banner: {
-    name: "🎉 One Blog",
+    name: "🎉 远祥阁",
     bgStyle: "partImg",
     imgSrc: ["/blog/bg1.webp", "/blog/bg2.webp", "/blog/bg3.webp"],
     description: [
@@ -166,7 +166,7 @@ export const teekBlogFullConfig: TeekConfig = {
     coverImgMode: "full",
   },
   banner: {
-    name: "🎉 One Blog",
+    name: "🎉 远祥阁",
     bgStyle: "fullImg",
     imgSrc: ["/blog/bg1.webp", "/blog/bg2.webp", "/blog/bg3.webp"],
     description: [

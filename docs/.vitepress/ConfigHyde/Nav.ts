@@ -2,70 +2,6 @@
 import { TeekIcon, VdoingIcon, SSLIcon, BlogIcon } from "./icon/NavIcon";
 export const Nav = [
     { text: "🏡首页", link: "/" },
-
-
-    // 下拉菜单 (测试 导航栏图标-自定义组件 对  下拉菜单的影响)
-    // {
-    //   text: "📖笔记专栏",
-    //   items: [
-    //     {
-    //       component: "NavIcon",
-    //       props: TeekIcon,
-    //     },
-    //     {
-    //       component: "NavIcon",
-    //       props: VdoingIcon,
-    //     },
-    //     {
-    //       component: "NavIcon",
-    //       props: SSLIcon,
-    //     },
-    //     {
-    //       component: "NavIcon",
-    //       props: BlogIcon,
-    //     },
-    //   ],
-    // },
-
-
-
-    // (测试 导航栏图标-自定义组件 对  分组菜单 的影响)
-    // {
-    //   text: '指南',
-    //   items: [
-    //     {
-    //       // 分组标题1
-    //       text: '介绍',
-    //       items: [
-    //         {
-    //           component: "NavIcon",
-    //           props: SSLIcon,
-    //         },
-    //         {
-    //           component: "NavIcon",
-    //           props: BlogIcon,
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       // 分组标题2
-    //       text: '基础设置',
-    //       items: [
-    //         {
-    //           component: "NavIcon",
-    //           props: SSLIcon,
-    //         },
-    //         {
-    //           component: "NavIcon",
-    //           props: BlogIcon,
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
-
-
-
     // 笔记
     {
       text: '🗃️笔记',
@@ -305,7 +241,6 @@ export const Nav = [
                 `,
               link: '/wenan',
             },
-            // { text: "💖情侣空间", link: "https://fxj.onedayxyy.cn/" },
           ],
         },
       ],
@@ -325,24 +260,6 @@ export const Nav = [
             </div>
             `,
           link: '/archives',
-        },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/清单.svg" alt="" style="width: 16px; height: 16px;">
-              <span>清单页</span>
-            </div>
-            `,
-          link: '/articleOverview',
-        },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/登录.svg" alt="" style="width: 16px; height: 16px;">
-              <span>登录页</span>
-            </div>
-            `,
-          link: '/login',
         },
         {
           text: `
@@ -368,31 +285,12 @@ export const Nav = [
         {
           text: `
             <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/时间轴.svg" alt="" style="width: 16px; height: 16px;">
-              <span>时间轴</span>
-            </div>
-            `,
-          link: 'https://onedayxyy.cn/time-line/',
-        },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
               <img src="/img/nav/网站统计.svg" alt="" style="width: 16px; height: 16px;">
               <span>网站统计</span>
             </div>
             `,
           link: 'https://umami.onedayxyy.cn/share/DzS4g85V8JkxsNRk/onedayxyy.cn',
         },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/站点监控.svg" alt="" style="width: 16px; height: 16px;">
-              <span>站点监控</span>
-            </div>
-            `,
-          link: 'https://status.onedayxyy.cn/status/monitor',
-        },
-
       ],
     },       
   ]

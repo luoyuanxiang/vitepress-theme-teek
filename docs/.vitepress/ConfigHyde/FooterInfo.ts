@@ -1,6 +1,5 @@
 // 底部信息配置
 import { version } from "vitepress-theme-teek/es/version"; // 导入版本号
-
 export const FooterInfo = {
   topMessage: [
     `<span><img alt="VitePress" src="https://liuyuyang.net/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fanimals.65eaf6e3.webp&w=750&q=75"><span/>`,
@@ -11,37 +10,37 @@ export const FooterInfo = {
     
     <a target="_blank" href="https://twikoo.js.org/" title="本站评论系统使用 Twikoo" ><img alt="Twikoo" src="https://img.shields.io/badge/Comments-Twikoo-0072F9"></a>
     
-    <a target="_blank" href="https://www.algolia.com/" title="本站搜索服务使用 Algolia"><img alt="Algolia" src="https://img.shields.io/badge/Search-Algolia-3095FA?logo=Algolia"></a>
+<!--    <a target="_blank" href="https://www.algolia.com/" title="本站搜索服务使用 Algolia"><img alt="Algolia" src="https://img.shields.io/badge/Search-Algolia-3095FA?logo=Algolia"></a>-->
 
-    <a target="_blank" href="https://www.ucloud.cn/" title="本站部署服务使用 ucloud"><img alt="ucloud" src="https://img.shields.io/badge/Ucloud-Server?logo=alibabacloud&label=Server&color=%23FF6A00"></a> 
+<!--    <a target="_blank" href="https://www.ucloud.cn/" title="本站部署服务使用 ucloud"><img alt="ucloud" src="https://img.shields.io/badge/Ucloud-Server?logo=alibabacloud&label=Server&color=%23FF6A00"></a> -->
 
-    <a target="_blank" href="https://edgeone.ai/zh" title="本站部署服务使用 EdgeOne"><img alt="EdgeOne" src="https://img.shields.io/badge/EdgeOne-CDN?logo=alibabacloud&label=CDN&color=%23FF6A00"></a>
+<!--    <a target="_blank" href="https://edgeone.ai/zh" title="本站部署服务使用 EdgeOne"><img alt="EdgeOne" src="https://img.shields.io/badge/EdgeOne-CDN?logo=alibabacloud&label=CDN&color=%23FF6A00"></a>-->
     
     <a target="_blank" href="https://51.la/" title="本站统计服务使用 51.LA"><img alt="51.LA" src="https://img.shields.io/badge/51.LA-000000?logo=51.LA&label=Count&color=%23FF6A00"></a>
 
     
-    <a target="_blank" href="https://nginx.org/" title="本站Nginx反向代理服务 Nginx"><img alt="Nginx" src="https://img.shields.io/badge/Nginx-Proxy?logo=Nginx&label=Proxy"></a>`,
+<!--    <a target="_blank" href="https://nginx.org/" title="本站Nginx反向代理服务 Nginx"><img alt="Nginx" src="https://img.shields.io/badge/Nginx-Proxy?logo=Nginx&label=Proxy"></a>-->`,
   ],
   theme: {
     name: `Theme By Teek@${version}-2025.6.3`,
   },
   bottomMessage: [
-    `<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3LmZHLhDZIDpMaT0/quote.js?theme=#1690FF,#333333,#999999,#007BFF,#FFFFFF,#1690FF,12&f=12&display=0,0,1,1,1,1,1,1"></script>`,
+    `<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3FYZE9zfaINipTml/quote.js?theme=#1690FF,#333333,#999999,#007BFF,#FFFFFF,#1690FF,12&f=12&display=0,0,1,1,1,1,1,1"></script>`,
     `<span id="runtime"></span>(●'◡'●)`,
     "初闻不知曲中意，再听已是曲中人",
   ],
   copyright: {
-    createYear: 2021,
-    suffix: "One Blog",
+    createYear: 2025,
+    suffix: "远祥阁",
   },
-  icpRecord: {
-    name: "陇ICP备2023002645号",
-    link: "http://beian.miit.gov.cn/",
-  },
-  // 网络安全备案信息配置
-  securityRecord: {
-    name: "甘公网安备62102702000211号",
-    link: "https://beian.mps.gov.cn/",
-  },
+  // icpRecord: {
+  //   name: "陇ICP备2023002645号",
+  //   link: "http://beian.miit.gov.cn/",
+  // },
+  // // 网络安全备案信息配置
+  // securityRecord: {
+  //   name: "甘公网安备62102702000211号",
+  //   link: "https://beian.mps.gov.cn/",
+  // },
   customHtml: ``, // 搭配 ./theme/composables/useRuntime.ts
 };

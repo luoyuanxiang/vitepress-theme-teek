@@ -40,11 +40,11 @@ import {
 
 export const profile = {
   title: '你好，我是',
-  name: 'One',
-  desc: '明心静性，爱自己',
-  avatar: '/img/xyy.webp',//头像
+  name: '远祥阁',
+  desc: '一方数字天地，半卷生活札记',
+  avatar: 'https://cdn.luoyuanxiang.top/logo/logo.webp',//头像
   buttons: [
-    { text: '联系我', link: 'mailto:your@email.com', type: 'primary' },
+    { text: '联系我', link: 'mailto:1141306760@qq.com', type: 'primary' },
     { text: '查看项目', link: '/teek', type: 'default' }
   ],
 };

@@ -3,11 +3,11 @@ import { gitee, email, WhatsApp, telegram } from "../theme/icon/icons";
 export const SocialLinks = [
   {
     icon: { svg: gitee },
-    link: "https://cnb.cool/onedayxyy/vitepress-theme-teek-one-public",
+    link: "https://gitee.com/luoyuanxiang",
   },
   {
     icon: { svg: email },
-    link: "mailto:2675263825@qq.com",
+    link: "mailto:1141306760@qq.com",
   },
   // {
   //   icon: { svg: WhatsApp },
@@ -17,8 +17,8 @@ export const SocialLinks = [
   //   icon: { svg: telegram },
   //   link: "https://t.me/seasir_Bot",
   // },
-  // {
-  //   icon: "github",
-  //   link: "https://github.com/Kele-Bingtang/vitepress-theme-teek/tree/dev",
-  // },
+  {
+    icon: "github",
+    link: "https://github.com/luoyuanxiang",
+  },
 ];

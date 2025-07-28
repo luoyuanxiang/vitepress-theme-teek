@@ -28,13 +28,12 @@ const CoverImgList = Wallpaper; // 获取壁纸列表
 
 
 const teekConfig = defineTeekConfig({
-  // author: { name: "Teeker", link: "https://github.com/Kele-Bingtang" },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: "/img/xyy.webp",
+    avatar: "https://cdn.luoyuanxiang.top/logo/logo.webp",
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
-    name: "One",
-    slogan: "明心静性，爱自己",
+    name: "远祥阁",
+    slogan: "一方数字天地，半卷生活札记",
     circleBgImg: "/img/bg/14.webp", // 头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
@@ -76,16 +75,12 @@ const teekConfig = defineTeekConfig({
 
   // 布蒜子统计分析
   docAnalysis: {
-    createTime: "2021-10-19",
+    createTime: "2025-07-28",
     statistics: {
       provider: "busuanzi",
     },
     wordCount: true,
     readingTime: true,
-    // overrideInfo: [
-    //   { key: "lastActiveTime", value: (_, currentValue) => `${currentValue}前` },
-    //   { key: "totalPosts", label: "文章总数目" },
-    // ],
     appendInfo: [{ key: "index", label: "序号", value: "One" }],
   },
 
@@ -93,7 +88,7 @@ const teekConfig = defineTeekConfig({
   // 风险链接提示页
   riskLink: {
     enabled: true, //是否启用风险链接提示功能
-    whitelist: ["https://onedayxyy.cn/", "https://vp.teek.top/", "https://teek.seasir.top/", /https:\/\/github.com/, /https:\/\/giee.com/], // 白名单，匹配到的链接不提示风险
+    whitelist: [], // 白名单，匹配到的链接不提示风险
     blacklist: [], // 黑名单，匹配到的链接提示风险
   },
 
@@ -104,8 +99,8 @@ const teekConfig = defineTeekConfig({
     return {
       type: "tip",
       title: "声明",
-      text: `<p>作者：One</p>
-             <p>版权：此文章版权归 One 所有，如有转载，请注明出处!</p>
+      text: `<p>作者：远祥阁</p>
+             <p>版权：此文章版权归 远祥阁 所有，如有转载，请注明出处!</p>
              <p style="margin-bottom: 0">链接：可点击右上角分享此页面复制文章链接</p>
             `,
     };
@@ -131,7 +126,7 @@ const teekConfig = defineTeekConfig({
   },
 
   post: {
-    showCapture: false,  //关闭自动摘要
+    showCapture: true,  //关闭自动摘要
   },
 
   articleShare: { enabled: true },
@@ -230,24 +225,24 @@ const teekConfig = defineTeekConfig({
       md.use(timeline); //时间线插件
       md.use(groupIconMdPlugin); // 代码组图标插件
     },    
-    demo: {
-      githubUrl: "https://github.com/Kele-Bingtang/vitepress-theme-teek/blob/master/docs",
-    },
+    // demo: {
+    //   githubUrl: "https://github.com/Kele-Bingtang/vitepress-theme-teek/blob/master/docs",
+    // },
   },
-  siteAnalytics: [
-    {
-      provider: "baidu",
-      options: {
-        id: "d5ee872d9aa1ef8021f4a3921b2e9c2a",
-      },
-    },
-    {
-      provider: "google",
-      options: {
-        id: "G-K5GNDW3L7K",
-      },
-    },
-  ],
+  // siteAnalytics: [
+  //   {
+  //     provider: "baidu",
+  //     options: {
+  //       id: "d5ee872d9aa1ef8021f4a3921b2e9c2a",
+  //     },
+  //   },
+  //   {
+  //     provider: "google",
+  //     options: {
+  //       id: "G-K5GNDW3L7K",
+  //     },
+  //   },
+  // ],
 
 
   // 赞赏在文章下方
@@ -258,7 +253,7 @@ const teekConfig = defineTeekConfig({
       icon: "weChatPay", // 赞赏图标，内置 weChatPay 和 alipay
       expandTitle: "打赏支持", // 展开标题，支持 HTML
       collapseTitle: "下次一定", // 折叠标题，支持 HTML
-      content: `<img src='/img/alipay/1.png'><img src='/img/alipay/2.png'>`, // 赞赏内容，支持 HTML
+      content: `<img alt="支付宝支付" src='https://cdn.luoyuanxiang.top/alipay.jpg'><img alt="微信支付" src='https://cdn.luoyuanxiang.top/wechatpay.jpg'>`, // 赞赏内容，支持 HTML
       expand: false, // 是否默认展开，默认 false
     },
   },  
@@ -267,7 +262,7 @@ const teekConfig = defineTeekConfig({
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
-  title: "One",
+  title: '远祥阁',
   description: description,
   cleanUrls: true,  //设置为true就是让链接后不默认添加.html
   lastUpdated: true,
@@ -290,7 +285,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "https://vp.teek.top",
+    hostname: "https://luoyuanxiang.top",
     transformItems: items => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
@@ -305,7 +300,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: "/teek-logo-mini.svg",
-    logo: "/favicon.ico",
+    logo: "https://cdn.luoyuanxiang.top/logo/logo.webp",
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
@@ -329,10 +324,10 @@ export default defineConfig({
     search: {
       provider: "local",
     },
-    // editLink: {
-    //   text: "在 GitHub 上编辑此页",
-    //   pattern: "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
-    // },
+    editLink: {
+      text: "在 GitHub 上编辑此页",
+      pattern: "https://github.com/luoyuanxiang/vitepress-theme-teek/edit/main/docs/:path",
+    },
   },
 
   vite: {

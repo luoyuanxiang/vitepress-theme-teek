@@ -3,6 +3,6 @@ permalink: /risk-link
 layout: false
 riskLinkPage: true
 logo: /favicon.ico
-name: One Blog
+name: 远祥阁
 article: false
 ---

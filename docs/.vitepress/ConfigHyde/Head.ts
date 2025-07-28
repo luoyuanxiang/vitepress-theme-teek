@@ -24,8 +24,8 @@ export const HeadData = [
         window.addEventListener('DOMContentLoaded', () => {
           if (typeof LA !== 'undefined') {
             LA.init({
-              id: '3LmZHLhDZIDpMaT0', // 您应用的统计掩码
-              ck: '3LmZHLhDZIDpMaT0', // 您应用的固定key值
+              id: '3FYZE9zfaINipTml', // 您应用的统计掩码
+              ck: '3FYZE9zfaINipTml', // 您应用的固定key值
               autoTrack: true, //开启事件分析功能
               hashMode: true, // 开启单页面应用模式
               screenRecord: true, //开启屏幕录制功能,默认为false
@@ -52,11 +52,11 @@ export const HeadData = [
     },
   ],
   ["meta", { name: "keywords", description }],
-  ["meta", { name: "baidu-site-verification", content: "codeva-QnY1Xh758j" }], // 百度收录
-  [
-    "meta",
-    { name: "msvalidate.01", content: "48CABE70F538B8D117567176ABF325AF" },
-  ], // Bing 收录验证
+  // ["meta", { name: "baidu-site-verification", content: "codeva-QnY1Xh758j" }], // 百度收录
+  // [
+  //   "meta",
+  //   { name: "msvalidate.01", content: "48CABE70F538B8D117567176ABF325AF" },
+  // ], // Bing 收录验证
   ["link", { rel: "icon", href: "/favicon.ico", type: "image/png" }],
   // 阿里在线矢量库
   [

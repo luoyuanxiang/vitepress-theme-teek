@@ -5,23 +5,23 @@ export const SocialDate: Social[] = [
   {
     icon: "mdi:github",
     name: "GitHub",
-    link: "https://github.com/OnlyOnexl",
+    link: "https://github.com/luoyuanxiang",
   },
   {
     icon: "simple-icons:gitee",
     name: "Gitee",
-    link: "https://gitee.com/onlyonexl/vitepress-theme-teek-one-public-simple",
+    link: "https://gitee.com/luoyuanxiang",
   },
   {
     icon: "icon-qq",
     iconType: "iconfont",
     name: "QQ",
-    link: "http://wpa.qq.com/msgrd?v=3&uin=2675263825&site=qq&menu=yes",
+    link: "https://wpa.qq.com/msgrd?v=3&uin=1141306760&site=qq&menu=yes",
   },
   {
     icon: "icon-mobile",
     iconType: "iconfont",
     name: "联系我",
-    link: "https://onedayxyy.cn/?contact=true",
+    link: "https://luoyuanxiang.top/?contact=true",
   },
 ];
