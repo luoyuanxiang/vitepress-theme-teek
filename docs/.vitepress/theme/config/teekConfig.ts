@@ -15,7 +15,7 @@ export const teekDocConfig: TeekConfig = {
       name: `Theme By Teek@${version}`,
     },
     copyright: {
-      createYear: 2025,
+      createYear: 2024,
       suffix: "远祥阁",
     },
   },  
@@ -61,7 +61,7 @@ const teekBlogCommonConfig: TeekConfig = {
 
   
   docAnalysis: {
-    createTime: "2025-07-28",
+    createTime: "2024-10-09",
     statistics: {
       provider: "busuanzi",
     },

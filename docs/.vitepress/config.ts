@@ -75,7 +75,7 @@ const teekConfig = defineTeekConfig({
 
   // 布蒜子统计分析
   docAnalysis: {
-    createTime: "2025-07-28",
+    createTime: "2024-10-09",
     statistics: {
       provider: "busuanzi",
     },

@@ -37,7 +37,7 @@ provide(teekConfigContext, teekConfig);
 const { start: startRibbon, stop: stopRibbon } = useRibbon({ immediate: false, clickReRender: true });
 
 // 页脚运行时间
-const { start: startRuntime, stop: stopRuntime } = useRuntime("2021-10-19 00:00:00", {
+const { start: startRuntime, stop: stopRuntime } = useRuntime("2024-10-09 00:00:00", {
   prefix: `<span style="width: 16px; display: inline-block; vertical-align: -3px; margin-right: 3px;">${clockIcon}</span>小破站已运行 `,
 });
 
