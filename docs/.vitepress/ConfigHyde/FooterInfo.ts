@@ -31,7 +31,7 @@ export const FooterInfo = {
   ],
   copyright: {
     createYear: 2025,
-    suffix: "远祥阁",
+    suffix: "落园香",
   },
   // icpRecord: {
   //   name: "陇ICP备2023002645号",

@@ -32,8 +32,8 @@ const teekConfig = defineTeekConfig({
     // 博主信息，显示在首页侧边栏
     avatar: "https://cdn.luoyuanxiang.top/logo/logo.webp",
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
-    name: "远祥阁",
-    slogan: "一方数字天地，半卷生活札记",
+    name: "落园香",
+    slogan: "拾取时光里的诗意与烟火",
     circleBgImg: "/img/bg/14.webp", // 头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
@@ -99,8 +99,8 @@ const teekConfig = defineTeekConfig({
     return {
       type: "tip",
       title: "声明",
-      text: `<p>作者：远祥阁</p>
-             <p>版权：此文章版权归 远祥阁 所有，如有转载，请注明出处!</p>
+      text: `<p>作者：落园香</p>
+             <p>版权：此文章版权归 落园香 所有，如有转载，请注明出处!</p>
              <p style="margin-bottom: 0">链接：可点击右上角分享此页面复制文章链接</p>
             `,
     };
@@ -262,7 +262,7 @@ const teekConfig = defineTeekConfig({
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
-  title: '远祥阁',
+  title: '落园香',
   description: description,
   cleanUrls: true,  //设置为true就是让链接后不默认添加.html
   lastUpdated: true,

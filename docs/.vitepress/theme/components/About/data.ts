@@ -40,8 +40,8 @@ import {
 
 export const profile = {
   title: '你好，我是',
-  name: '远祥阁',
-  desc: '一方数字天地，半卷生活札记',
+  name: '落园香',
+  desc: '拾取时光里的诗意与烟火',
   avatar: 'https://cdn.luoyuanxiang.top/logo/logo.webp',//头像
   buttons: [
     { text: '联系我', link: 'mailto:1141306760@qq.com', type: 'primary' },
