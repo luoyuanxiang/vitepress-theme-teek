@@ -1,0 +1,80 @@
+# .cnb.yml
+$:
+  # vscode 事件：专供页面中启动远程开发用
+  vscode:
+    - runner:
+        # 自定义CPU核心数,最大支持64核
+        cpus: 64
+      docker:
+        # 自定义开发环境
+        build:
+          # 指定构建镜像的 Dockerfile 文件
+          dockerfile: .ide/Dockerfile
+      services:
+        # 声明使用 vscode 服务
+        - vscode
+        # 声明在容器中支持 docker 命令
+        - docker
+      imports:
+        - https://cnb.cool/onedayxyy/secret/-/blob/main/envs.yml         
+      stages:
+        - name: 环境启动时执行以下命令
+          script:
+        # 安装pnpm并使用pnpm安装依赖
+            - npm install -g pnpm
+            - pnpm i
+
+# 云原生构建流程和自动部署
+master:
+  push:
+    - imports: https://cnb.cool/onedayxyy/secret/-/blob/main/envs.yml
+      stages:
+        - name: set env
+          script: echo -n $(date "+%Y-%m-%d %H:%M")
+          exports:
+            info: CUSTOM_ENV_DATE_INFO
+        - name: 构建当前项目
+          image: node:22
+          script: npm install -g pnpm && pnpm i && pnpm run docs:build
+        - name: 部署到Pages
+          image: node:22
+          script: npx edgeone pages deploy ./docs/.vitepress/dist --name vitepress-theme-teek --token $EDGEONE_PAGES_API_TOKEN
+
+
+        - name: 🧘‍♂️ 刷新缓存
+          image: docker.cnb.cool/znb/cdn-refresh
+          settings:
+            ak: "${TENCENT_OPSRE_AK}"
+            sk: "${TENCENT_OPSRE_SK}"
+            kind: "tencenteo"
+            rtype: "path"
+            domain: "onedayxyy.cn"
+            urls:
+              - "https://wiki.onedayxyy.cn/"
+
+        #同步仓库到gitee                  
+        - name: sync to gitee
+          image: tencentcom/git-sync
+          settings:
+            branch: master
+            auth_type: https
+            username: ${GIT_USERNAME}
+            password: ${GIT_ACCESS_TOKEN}
+            target_url: https://gitee.com/onlyonexl/vitepress-theme-teek-one-public.git
+            # git_email: 'github-actions[bot]@users.noreply.github.com'
+
+        - name: 🔔 发布通知
+          image: tencentcom/wecom-message
+          settings:
+            robot: ${WECOM_BOT}
+            msgType: markdown
+            content: |
+              > **🎉 Teek-One开源库 又一次发布成功啦！**   
+              > **构建时间:** $CUSTOM_ENV_DATE_INFO          
+              > **构建id:** $CNB_BUILD_ID  
+              > **提交id:** $CNB_COMMIT_SHORT            
+              > **构建分支:** $CNB_BRANCH
+              > **提交信息:** $CNB_COMMIT_MESSAGE_TITLE
+              > **提交者:** $CNB_COMMITTER
+              > **仓库地址:** [$CNB_REPO_URL_HTTPS]($CNB_REPO_URL_HTTPS)   
+              > **我的网站:** [onedayxyy.cn](https://onedayxyy.cn/)        
