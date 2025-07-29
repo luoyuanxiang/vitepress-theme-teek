@@ -24,7 +24,7 @@ export const FriendLink = {
       avatar: "https://testingcf.jsdelivr.net/gh/Kele-Bingtang/static/user/avatar2.png",
     },     
     {
-      avatar: "/img/website/hyde.ico",
+      avatar: "https://cdn.luoyuanxiang.top/img/website/hyde.ico",
       name: "Hyde Blog",
       desc: "人心中的成见是一座大山",
       link: "https://teek.seasir.top/",
@@ -36,7 +36,7 @@ export const FriendLink = {
       link: "https://wiki.eryajf.net/",
     },
     {
-      avatar: "/img/website/sugarat.top-logo.jpeg",
+      avatar: "https://cdn.luoyuanxiang.top/img/website/sugarat.top-logo.jpeg",
       name: "粥里有勺糖",
       desc: "你的指尖,拥有改变世界的力量",
       link: "https://sugarat.top/",
@@ -54,13 +54,13 @@ export const FriendLink = {
       link: "https://liuyuyang.net",
     },
     {
-      avatar: "/img/website/blog.grtsinry43.com.jpeg",
+      avatar: "https://cdn.luoyuanxiang.top/img/website/blog.grtsinry43.com.jpeg",
       name: "Grtsinry43’s Blog",
       desc: "总之岁月漫长，然而值得等待 ",
       link: "https://blog.grtsinry43.com/",
     },  
     {
-      avatar: "/img/website/blog.zhheo.com.png",
+      avatar: "https://cdn.luoyuanxiang.top/img/website/blog.zhheo.com.png",
       name: "张洪Heo",
       desc: "分享设计与科技生活",
       link: "https://blog.zhheo.com/",
@@ -69,7 +69,7 @@ export const FriendLink = {
       name: "蘑菇博客",
       desc: "蘑菇社区",
       link: "https://www.moguit.cn",
-      avatar: "/img/website/www.moguit.cn.png",
+      avatar: "https://cdn.luoyuanxiang.top/img/website/www.moguit.cn.png",
     },    
   ],
   // autoScroll: true,

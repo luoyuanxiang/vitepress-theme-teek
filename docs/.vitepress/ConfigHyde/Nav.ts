@@ -12,7 +12,7 @@ export const Nav = [
                     {
                         text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
                   <span>指南</span>
                 </div>
                 `,
@@ -26,7 +26,7 @@ export const Nav = [
                     {
                         text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
                   <span>配置</span>
                 </div>
                 `,
@@ -40,7 +40,7 @@ export const Nav = [
                     {
                         text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
                   <span>主题开发</span>
                 </div>
                 `,
@@ -57,7 +57,7 @@ export const Nav = [
                 // 分组标题2
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/Java-Light.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/Java-Light.svg" alt="" style="width: 16px; height: 16px;">
                   <span>后端</span>
                 </div>
                 `,
@@ -66,7 +66,7 @@ export const Nav = [
             {
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/linux.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/linux.svg" alt="" style="width: 16px; height: 16px;">
                   <span>运维</span>
                 </div>
                 `,
@@ -75,7 +75,7 @@ export const Nav = [
             {
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="/img/nav/html.png" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/html.png" alt="" style="width: 16px; height: 16px;">
                   <span>前端</span>
                 </div>
                 `,
@@ -97,7 +97,7 @@ export const Nav = [
             {
                 text: `
             <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/归档.svg" alt="" style="width: 16px; height: 16px;">
+              <img src="https://cdn.luoyuanxiang.top/img/nav/归档.svg" alt="" style="width: 16px; height: 16px;">
               <span>归档页</span>
             </div>
             `,
@@ -106,7 +106,7 @@ export const Nav = [
             {
                 text: `
             <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/风险提示.svg" alt="" style="width: 16px; height: 16px;">
+              <img src="https://cdn.luoyuanxiang.top/img/nav/风险提示.svg" alt="" style="width: 16px; height: 16px;">
               <span>风险链接提示页</span>
             </div>
             `,
@@ -126,7 +126,7 @@ export const Nav = [
             {
                 text: `
             <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/网站统计.svg" alt="" style="width: 16px; height: 16px;">
+              <img src="https://cdn.luoyuanxiang.top/img/nav/网站统计.svg" alt="" style="width: 16px; height: 16px;">
               <span>网站统计</span>
             </div>
             `,

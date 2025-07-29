@@ -9,7 +9,7 @@ export const CommentData = {
    *
    * @default 'https://cdn.jsdelivr.net/npm/twikoo@{version}/dist/twikoo.nocss.js'
    */
-  jsLink: 'https://registry.npmmirror.com/twikoo/1.6.44/files/dist/twikoo.min.js',
+  jsLink: 'https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.44/twikoo.min.js',
 
   // waline 配置，官网：https://waline.js.org/
   // serverURL: "https://tk.waline.youngkbt.cn/",

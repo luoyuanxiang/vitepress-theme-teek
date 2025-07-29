@@ -34,7 +34,7 @@ const teekConfig = defineTeekConfig({
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
     name: "🎉老罗の小站",
     slogan: "收录技术、生活与思考的零散片段",
-    circleBgImg: "/img/bg/14.webp", // 头像圆形背景图
+    circleBgImg: "https://cdn.luoyuanxiang.top/img/bg/14.webp", // 头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
   },
