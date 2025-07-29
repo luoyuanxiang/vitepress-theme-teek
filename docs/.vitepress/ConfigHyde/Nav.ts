@@ -83,12 +83,7 @@ export const Nav = [
             },
         ],
     },
-    {
-        text: '🎨随笔',
-        items: [
-            {text: '📝Java代码性能优化', link: '/performanceOptimization'},
-        ]
-    },
+    {text: '📝随笔', link: '/essay'},
     {
         text: '👏索引',
         items: [
