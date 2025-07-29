@@ -84,6 +84,12 @@ export const Nav = [
         ],
     },
     {
+        text: '🎨随笔',
+        items: [
+            {text: '📝Java代码性能优化', link: '/performanceOptimization'},
+        ]
+    },
+    {
         text: '👏索引',
         items: [
             {text: '📃分类页', link: '/categories'},
@@ -108,16 +114,15 @@ export const Nav = [
             },
         ],
     },
-
     // 关于
     {
         text: '🍷关于',
         items: [
             {text: '👋关于我', link: '/about-me'},
-            {text: '🎉关于本站', link: '/about-website'},
+            // {text: '🎉关于本站', link: '/about-website'},
             {text: '🌐网站导航', link: '/websites'},
             {text: "👂留言区", link: "/liuyanqu"},
-            {text: "💡思考", link: "/thinking"},
+            // {text: "💡思考", link: "/thinking"},
             {
                 text: `
             <div style="display: flex; align-items: center; gap: 4px;">

@@ -40,9 +40,9 @@ import {
 
 export const profile = {
   title: '你好，我是',
-  name: '落园香',
-  desc: '拾取时光里的诗意与烟火',
-  avatar: 'https://cdn.luoyuanxiang.top/logo/logo.webp',//头像
+  name: '老罗の小站',
+  desc: '收录技术、生活与思考的零散片段',
+  avatar: 'https://cdn.luoyuanxiang.top/avatar.png',//头像
   buttons: [
     { text: '联系我', link: 'mailto:1141306760@qq.com', type: 'primary' },
     { text: '查看项目', link: '/teek', type: 'default' }

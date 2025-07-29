@@ -2,7 +2,7 @@
 permalink: /risk-link
 layout: false
 riskLinkPage: true
-logo: /favicon.ico
-name: 落园香
+logo: https://cdn.luoyuanxiang.top/avatar.png
+name: 老罗の小站
 article: false
 ---

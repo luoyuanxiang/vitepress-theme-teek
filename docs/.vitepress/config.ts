@@ -30,10 +30,10 @@ const CoverImgList = Wallpaper; // 获取壁纸列表
 const teekConfig = defineTeekConfig({
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: "https://cdn.luoyuanxiang.top/logo/logo.webp",
+    avatar: "https://cdn.luoyuanxiang.top/avatar.png",
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
-    name: "落园香",
-    slogan: "拾取时光里的诗意与烟火",
+    name: "🎉老罗の小站",
+    slogan: "收录技术、生活与思考的零散片段",
     circleBgImg: "/img/bg/14.webp", // 头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
@@ -99,8 +99,8 @@ const teekConfig = defineTeekConfig({
     return {
       type: "tip",
       title: "声明",
-      text: `<p>作者：落园香</p>
-             <p>版权：此文章版权归 落园香 所有，如有转载，请注明出处!</p>
+      text: `<p>作者：老罗の小站</p>
+             <p>版权：此文章版权归 老罗の小站 所有，如有转载，请注明出处!</p>
              <p style="margin-bottom: 0">链接：可点击右上角分享此页面复制文章链接</p>
             `,
     };
@@ -121,7 +121,7 @@ const teekConfig = defineTeekConfig({
   // 新版代码块配置
   codeBlock: {
     disabled: false, // 是否禁用新版代码块
-    collapseHeight: 700, // 超出高度后自动折叠，设置 true 则默认折叠，false 则默认不折叠
+    collapseHeight: 400, // 超出高度后自动折叠，设置 true 则默认折叠，false 则默认不折叠
     copiedDone: (TkMessage) => TkMessage.success("代码已复制 🎉"),
   },
 
@@ -154,20 +154,20 @@ const teekConfig = defineTeekConfig({
 
 
   // 超过半年的文章自动提示文章内容可能已过时
-  articleTopTip: (frontmatter) => {
-    const tip: Record<string, string> = {
-      type: "warning",
-      text: "文章发布较早，内容可能过时，阅读注意甄别。",
-    };
-
-    // 大于半年，添加提示
-    const longTime = 6 * 30 * 24 * 60 * 60 * 1000;
-    if (
-      frontmatter.date &&
-      Date.now() - new Date(frontmatter.date).getTime() > longTime
-    )
-      return tip;
-  },
+  // articleTopTip: (frontmatter: any) => {
+  //   const tip: Record<string, string> = {
+  //     type: "warning",
+  //     text: "文章发布较早，内容可能过时，阅读注意甄别。",
+  //   };
+  //
+  //   // 大于半年，添加提示
+  //   const longTime = 6 * 30 * 24 * 60 * 60 * 1000;
+  //   if (
+  //     frontmatter.date &&
+  //     Date.now() - new Date(frontmatter.date).getTime() > longTime
+  //   )
+  //     return tip;
+  // },
 
   // 评论配置
   comment: {
@@ -196,16 +196,13 @@ const teekConfig = defineTeekConfig({
       // initItems: false, //这条命令注释后，才会让文档和目录的样式保持一致
       collapsed: true, //打开侧边栏自动收缩功能
     },
-
-    autoFrontmatter: true, // 自动生成 frontmatter
     permalinkOption: {
       notFoundDelayLoad: 1000, // 1秒后加载
     },
-
+    autoFrontmatter: true, // 自动生成 frontmatter
     // 自动格式formatter插件 添加文章封面图
     autoFrontmatterOption: {
-      exclude: { title: true, date: true }, // 排除自动生成字段
-      transform: frontmatter => {
+      transform: (frontmatter: any) => {
        // 如果文件本身存在了 coverImg，则不生成
        if (frontmatter.coverImg) return;
         
@@ -221,7 +218,7 @@ const teekConfig = defineTeekConfig({
   },
 
   markdown: {
-    config: (md) => {
+    config: (md: any) => {
       md.use(timeline); //时间线插件
       md.use(groupIconMdPlugin); // 代码组图标插件
     },    
@@ -262,7 +259,7 @@ const teekConfig = defineTeekConfig({
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
-  title: '落园香',
+  title: '老罗の小站',
   description: description,
   cleanUrls: true,  //设置为true就是让链接后不默认添加.html
   lastUpdated: true,
@@ -300,7 +297,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: "/teek-logo-mini.svg",
-    logo: "https://cdn.luoyuanxiang.top/logo/logo.webp",
+    logo: "",
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
