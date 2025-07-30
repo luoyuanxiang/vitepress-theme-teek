@@ -2,54 +2,6 @@
 
 export const Nav = [
     {text: "🏡首页", link: "/"},
-    // 笔记
-    {
-        text: '🏓主题',
-        items: [
-            {
-                text: '指南',
-                items: [
-                    {
-                        text: `
-                <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
-                  <span>指南</span>
-                </div>
-                `,
-                        link: '/guide',
-                    },
-                ],
-            },
-            {
-                text: '配置',
-                items: [
-                    {
-                        text: `
-                <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
-                  <span>配置</span>
-                </div>
-                `,
-                        link: '/reference',
-                    },
-                ],
-            },
-            {
-                text: '主题开发',
-                items: [
-                    {
-                        text: `
-                <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/teek.svg" alt="" style="width: 16px; height: 16px;">
-                  <span>主题开发</span>
-                </div>
-                `,
-                        link: '/develop',
-                    },
-                ],
-            },
-        ]
-    },
     {
         text: '🗃️笔记',
         items: [
@@ -57,7 +9,7 @@ export const Nav = [
                 // 分组标题2
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/Java-Light.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/编程.svg" alt="" style="width: 16px; height: 16px;">
                   <span>后端</span>
                 </div>
                 `,
@@ -66,7 +18,7 @@ export const Nav = [
             {
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/linux.svg" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/运维.svg" alt="" style="width: 16px; height: 16px;">
                   <span>运维</span>
                 </div>
                 `,
@@ -75,7 +27,7 @@ export const Nav = [
             {
                 text: `
                 <div style="display: flex; align-items: center; gap: 4px;">
-                  <img src="https://cdn.luoyuanxiang.top/img/nav/html.png" alt="" style="width: 16px; height: 16px;">
+                  <img src="https://cdn.luoyuanxiang.top/img/nav/前端.svg" alt="" style="width: 16px; height: 16px;">
                   <span>前端</span>
                 </div>
                 `,
@@ -83,7 +35,25 @@ export const Nav = [
             },
         ],
     },
-    {text: '📝随笔', link: '/essay'},
+    {
+        text: '📝随笔',
+        items: [
+            {
+                text: `<div style="display: flex; align-items: center; gap: 4px;">
+              <img src="https://cdn.luoyuanxiang.top/img/nav/Java-Light.svg" alt="" style="width: 16px; height: 16px;">
+              <span>Java代码性能优化总结</span>
+            </div>`,
+                link: '/Java/optimize'
+            },
+            {
+                text: `<div style="display: flex; align-items: center; gap: 4px;">
+              <img src="https://cdn.luoyuanxiang.top/img/nav/mysql.png" alt="" style="width: 16px; height: 16px;">
+              <span>SQL优化</span>
+            </div>`,
+                link: '/SQL/optimize'
+            },
+        ]
+    },
     {
         text: '👏索引',
         items: [

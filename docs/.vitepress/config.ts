@@ -2,7 +2,6 @@ import type {HeadConfig} from "vitepress"; // 在文件顶部添加类型导入
 import {defineConfig} from "vitepress";
 import {defineTeekConfig} from "vitepress-theme-teek/config";
 import {Wallpaper} from "./ConfigHyde/Wallaper"; // 导入Wallaper模块
-import {CommentData} from "./ConfigHyde/Comment"; //导入评论配置
 import {Nav} from "./ConfigHyde/Nav"; // 导入Nav模块
 import {SocialLinks} from "./ConfigHyde/SocialLinks"; //导入社交链接配置
 import {groupIconMdPlugin,} from "vitepress-plugin-group-icons"; // 导入代码组图标插件
@@ -228,15 +227,17 @@ const teekConfig = defineTeekConfig({
 
     // 赞赏在文章下方
     appreciation: {
-        position: "doc-after",
+        position: "doc-after-popper",
         options: {
-            // buttonHtml: `<button>测试按钮</button>`,
+            trigger: "hover",
+            title: '打赏支持',
+            // buttonHtml: `<button class="tk-article-appreciation__button">打赏支持</button>`,
             icon: "weChatPay", // 赞赏图标，内置 weChatPay 和 alipay
-            expandTitle: "打赏支持", // 展开标题，支持 HTML
-            collapseTitle: "下次一定", // 折叠标题，支持 HTML
-            content: `<img alt="支付宝支付" src='https://cdn.luoyuanxiang.top/alipay.jpg'><img alt="微信支付" src='https://cdn.luoyuanxiang.top/wechatpay.jpg'>`, // 赞赏内容，支持 HTML
+            // expandTitle: "打赏支持", // 展开标题，支持 HTML
+            // collapseTitle: "下次一定", // 折叠标题，支持 HTML
+            content: `<img alt="付款码" src='https://cdn.luoyuanxiang.top/PayQrcode.png'>`, // 赞赏内容，支持 HTML
             expand: false, // 是否默认展开，默认 false
-        },
+        }
     },
 });
 
