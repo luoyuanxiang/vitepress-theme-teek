@@ -34,6 +34,22 @@ export const HeadData = [
         });
       `,
     ],
+    // 统计分析
+    [
+        "script",
+        {
+            crossorigin: "anonymous",
+            src: '//sdk.51.la/perf/js-sdk-perf.min.js'
+        }
+    ],
+    [
+        "script",
+        {},
+        `// 等待页面加载完成后初始化
+        window.addEventListener('DOMContentLoaded', () => {
+          new LingQue.Monitor().init({id:"3HAloXRnxBFm215S"});
+        });`
+    ],
     ["meta", {name: "referrer", content: "no-referrer-when-downgrade"}], //不蒜子统计
     ["meta", {name: "author", content: "Tianke"}],
     [
