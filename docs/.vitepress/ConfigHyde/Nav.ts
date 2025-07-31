@@ -45,13 +45,13 @@ export const Nav = [
             </div>`,
                 link: '/Java/optimize'
             },
-            {
-                text: `<div style="display: flex; align-items: center; gap: 4px;">
-              <img src="https://cdn.luoyuanxiang.top/img/nav/mysql.png" alt="" style="width: 16px; height: 16px;">
-              <span>SQL优化</span>
-            </div>`,
-                link: '/SQL/optimize'
-            },
+            // {
+            //     text: `<div style="display: flex; align-items: center; gap: 4px;">
+            //   <img src="https://cdn.luoyuanxiang.top/img/nav/mysql.png" alt="" style="width: 16px; height: 16px;">
+            //   <span>SQL优化</span>
+            // </div>`,
+            //     link: '/SQL/optimize'
+            // },
         ]
     },
     {
