@@ -6,7 +6,8 @@ import {Nav} from "./ConfigHyde/Nav"; // 导入Nav模块
 import {SocialLinks} from "./ConfigHyde/SocialLinks"; //导入社交链接配置
 import {groupIconMdPlugin,} from "vitepress-plugin-group-icons"; // 导入代码组图标插件
 import timeline from "vitepress-markdown-timeline"; // 导入时间线插件
-import {HeadData} from "./ConfigHyde/Head"; // 导入 HeadData 导入和类型断言
+import {HeadData} from "./ConfigHyde/Head";
+import {CommentData} from "./ConfigHyde/Comment"; // 导入 HeadData 导入和类型断言
 
 
 const description = [
@@ -154,10 +155,10 @@ const teekConfig = defineTeekConfig({
     // },
 
     // 评论配置
-    // comment: {
-    //     provider: "twikoo",
-    //     options: CommentData,
-    // },
+    comment: {
+        provider: "twikoo",
+        options: CommentData,
+    },
 
 
     // 公告
