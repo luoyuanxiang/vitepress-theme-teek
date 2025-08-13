@@ -42,22 +42,24 @@ Spring IOC 容器可以根据配置文件中的信息来创建对象、管理对
 
 首先，我们需要创建一个 XML 配置文件，用于描述对象之间的依赖关系。在配置文件中，我们需要定义 Bean 的名称、类名和属性值等信息。下面是一个简单的例子：
 
-    <!-- 用户接口 -->
-    <bean id="userService" class="com.example.UserService">
-        <property name="userDao" ref="userDao"/>
-    </bean>
-    
-    <!-- 用户接口 -->
-    <bean id="userDao" class="com.example.UserDaoImpl">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    
-    <!-- 数据源 -->
-    <bean id="dataSource" class="com.example.DataSource">
-        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
-    </bean>
+```xml
+<!-- 用户接口 -->
+<bean id="userService" class="com.example.UserService">
+    <property name="userDao" ref="userDao"/>
+</bean>
+
+<!-- 用户接口 -->
+<bean id="userDao" class="com.example.UserDaoImpl">
+    <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<!-- 数据源 -->
+<bean id="dataSource" class="com.example.DataSource">
+    <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+    <property name="username" value="root"/>
+    <property name="password" value="root"/>
+</bean>
+```
     
 
 #### （2）加载配置文件
@@ -69,7 +71,9 @@ Bean，并将它们注册到 IOC 容器中。
 `ClassPathXmlApplicationContext`。`ClassPathXmlApplicationContext` 可以从类路径下加载 XML 配置文件，创建一个 IOC  
 容器，并根据配置文件中的信息创建 Bean。下面是一个简单的例子：
 
-    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+```java
+ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+```
     
 
 ### （3）获取 Bean
@@ -80,12 +84,16 @@ Bean，并将它们注册到 IOC 容器中。
 
 按名称
 
-    UserService userService = (UserService) context.getBean("userService");
+```java
+UserService userService = (UserService) context.getBean("userService");
+```
     
 
 按类
 
-    UserService userService = context.getBean(UserService.class);
+```java
+UserService userService = context.getBean(UserService.class);
+```
     
 
 ### （4）Bean 的作用域
@@ -102,19 +110,21 @@ Spring 提供了五种常用的 Bean 作用域，分别是 `Singleton`、`Protot
 Spring IOC 容器会自动管理对象之间的依赖关系，并将它们注入到对象中。在配置文件中，我们可以通过 `property` 元素来设置 Bean  
 的属性值。下面是一个简单的例子：
 
-    <bean id="userService" class="com.example.UserService">
-        <property name="userDao" ref="userDao"/>
-    </bean>
-    
-    <bean id="userDao" class="com.example.UserDaoImpl">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    
-    <bean id="dataSource" class="com.example.DataSource">
-         <property name="url" value="jdbc:mysql://localhost:3306/test"/>
-         <property name="username" value="root"/>
-         <property name="password" value="root"/>
-    </bean>
+```xml
+<bean id="userService" class="com.example.UserService">
+    <property name="userDao" ref="userDao"/>
+</bean>
+
+<bean id="userDao" class="com.example.UserDaoImpl">
+    <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<bean id="dataSource" class="com.example.DataSource">
+     <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+     <property name="username" value="root"/>
+     <property name="password" value="root"/>
+</bean>
+```
     
 
 在上面的配置文件中，我们定义了三个 Bean：`userService`、`userDao` 和 `dataSource`。其中，`userService` 依赖于 `userDao`，而 `userDao` 又依赖于  
