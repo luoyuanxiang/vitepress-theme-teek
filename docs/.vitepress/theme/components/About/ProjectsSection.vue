@@ -3,24 +3,24 @@
     <h2 class="oss-title">开源项目</h2>
     <div class="oss-list">
       <div class="oss-card" v-for="(item, idx) in ossProjects" :key="item.name" :ref="setOssCardRef(idx)"
-        :class="{ visible: !isMobile || ossCardVisible[idx] }" v-memo="[item, ossCardVisible[idx]]">
+           :class="{ visible: !isMobile || ossCardVisible[idx] }" v-memo="[item, ossCardVisible[idx]]">
         <div class="oss-img-wrap">
-          <img :src="item.projectsimg" class="oss-img" :alt="item.name" />
+          <img :src="item.projectsImg" class="oss-img" :alt="item.name"/>
         </div>
         <div class="oss-content">
           <div class="oss-name">{{ item.name }}</div>
           <div class="oss-desc">{{ item.desc }}</div>
           <div class="oss-data">
             <span>
-              <TkIcon :icon="Star" icon-type="svg" size="16px" />
+              <TkIcon :icon="Star" icon-type="svg" size="16px"/>
               {{ item.Star }}
             </span>
             <span>
-              <TkIcon :icon="Fork" icon-type="svg" size="16px" />
+              <TkIcon :icon="Fork" icon-type="svg" size="16px"/>
               {{ item.Fork }}
             </span>
             <span>
-              <TkIcon :icon="View" icon-type="svg" size="16px" />
+              <TkIcon :icon="View" icon-type="svg" size="16px"/>
               {{ item.View }}
             </span>
           </div>
@@ -34,10 +34,10 @@
 </template>
 
 <script setup>
-import { watch, nextTick, onMounted, onBeforeUnmount } from 'vue';
-import { TkIcon } from "vitepress-theme-teek";
-import { useMultipleIntersectionObserver } from './useIntersectionObserver';
-import { ossProjects, Star, Fork, View } from './data';
+import {nextTick, onBeforeUnmount, onMounted, watch} from 'vue';
+import {TkIcon} from "vitepress-theme-teek";
+import {useMultipleIntersectionObserver} from './useIntersectionObserver';
+import {Fork, ossProjects, Star, View} from './data';
 
 const props = defineProps({
   isVisible: {

@@ -160,7 +160,39 @@ export const techStackIcons = [
   {},
 ];
 
-export const ossProjects = [];
+interface Projects {
+  name?: string;
+  desc?: string;
+  tag?: { name: string; bg: string; color: string };
+  projectsImg?: string;
+  Star: string;
+  Fork: string;
+  View: string;
+  github: string;
+}
+
+export const ossProjects: Projects[] = [
+  {
+    name: "Teek-One",
+    desc: "🎉 Teek~一款简约、唯美、丝滑且强大的VitePress主题博客",
+    tag: { name: "React", bg: "#e3edfa", color: "#3976c6" },
+    projectsImg: "https://img.onedayxyy.cn/images/image-20250502073710566.png",
+    Star: '35.0k',
+    Fork: '12.6k',
+    View: '32.6k',
+    github: "https://onedayxyy.cn/teek",
+  },
+  {
+    name: "Typora-One",
+    desc: "Teek 是一个轻量、简洁高效、灵活配置、易于扩展的 VitePress 主题 ✨",
+    tag: { name: "JavaScript", bg: "#fffbe6", color: "#e4ae3a" },
+    projectsImg: "https://img.onedayxyy.cn/images/image-20240911120905085.png",
+    Star: '96.8k',
+    Fork: '46.2k',
+    View: '79.3k',
+    github: "https://onedayxyy.cn/typora-theme-one",
+  },
+];
 
 // 导出开源项目图标用于子组件
 export { Star, Fork, View };

@@ -1,5 +1,4 @@
-
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import {onBeforeUnmount, onMounted, ref} from 'vue';
 
 /**
  * 通用的 IntersectionObserver 组合函数
@@ -8,56 +7,56 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
  * @returns {Object} { isVisible, targetRef }
  */
 export function useIntersectionObserver(threshold = 0.2, once = false) {
-  const isVisible = ref(false);
-  const targetRef = ref(null);
-  let observer = null;
+    const isVisible = ref(false);
+    const targetRef = ref(null);
+    let observer = null;
 
-  const observe = () => {
-    if (!('IntersectionObserver' in window)) {
-      // 不支持 IntersectionObserver 的浏览器，直接显示元素
-      isVisible.value = true;
-      return;
-    }
-
-    if (!targetRef.value) return;
-
-    observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        isVisible.value = entry.isIntersecting;
-        
-        // 如果设置为只触发一次且已经可见，则停止观察
-        if (once && entry.isIntersecting) {
-          cleanup();
+    const observe = () => {
+        if (!('IntersectionObserver' in window)) {
+            // 不支持 IntersectionObserver 的浏览器，直接显示元素
+            isVisible.value = true;
+            return;
         }
-      },
-      { threshold }
-    );
 
-    observer.observe(targetRef.value);
-  };
+        if (!targetRef.value) return;
 
-  const cleanup = () => {
-    if (observer) {
-      observer.disconnect();
-      observer = null;
-    }
-  };
+        observer = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries;
+                isVisible.value = entry.isIntersecting;
 
-  onMounted(() => {
-    // 使用 nextTick 确保 DOM 已渲染
-    if (targetRef.value) {
-      observe();
-    }
-  });
+                // 如果设置为只触发一次且已经可见，则停止观察
+                if (once && entry.isIntersecting) {
+                    cleanup();
+                }
+            },
+            {threshold}
+        );
 
-  onBeforeUnmount(cleanup);
+        observer.observe(targetRef.value);
+    };
 
-  return {
-    isVisible,
-    targetRef,
-    cleanup
-  };
+    const cleanup = () => {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+        }
+    };
+
+    onMounted(() => {
+        // 使用 nextTick 确保 DOM 已渲染
+        if (targetRef.value) {
+            observe();
+        }
+    });
+
+    onBeforeUnmount(cleanup);
+
+    return {
+        isVisible,
+        targetRef,
+        cleanup
+    };
 }
 
 /**
@@ -67,59 +66,59 @@ export function useIntersectionObserver(threshold = 0.2, once = false) {
  * @returns {Object} 观察器管理对象
  */
 export function useMultipleIntersectionObserver(threshold = 0.2, once = false) {
-  const elementsRefs = ref([]);
-  const elementsVisible = ref([]);
-  let observer = null;
+    const elementsRefs = ref([]);
+    const elementsVisible = ref([]);
+    let observer = null;
 
-  const setElementRef = (index) => {
-    return (el) => {
-      elementsRefs.value[index] = el;
+    const setElementRef = (index) => {
+        return (el) => {
+            elementsRefs.value[index] = el;
+        };
     };
-  };
 
-  const setupObserver = (count) => {
-    cleanup();
-    
-    if (!('IntersectionObserver' in window)) {
-      elementsVisible.value = new Array(count).fill(true);
-      return;
-    }
+    const setupObserver = (count) => {
+        cleanup();
 
-    elementsVisible.value = new Array(count).fill(false);
-
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const idx = elementsRefs.value.findIndex(el => el === entry.target);
-          if (idx !== -1) {
-            elementsVisible.value[idx] = true;
-            if (once) {
-              observer.unobserve(entry.target);
-            }
-          }
+        if (!('IntersectionObserver' in window)) {
+            elementsVisible.value = new Array(count).fill(true);
+            return;
         }
-      });
-    }, { threshold });
 
-    elementsRefs.value.forEach((el) => {
-      if (el) observer.observe(el);
-    });
-  };
+        elementsVisible.value = new Array(count).fill(false);
 
-  const cleanup = () => {
-    if (observer) {
-      observer.disconnect();
-      observer = null;
-    }
-  };
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const idx = elementsRefs.value.findIndex(el => el === entry.target);
+                    if (idx !== -1) {
+                        elementsVisible.value[idx] = true;
+                        if (once) {
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                }
+            });
+        }, {threshold});
 
-  onBeforeUnmount(cleanup);
+        elementsRefs.value.forEach((el) => {
+            if (el) observer.observe(el);
+        });
+    };
 
-  return {
-    elementsVisible,
-    setElementRef,
-    setupObserver,
-    cleanup
-  };
+    const cleanup = () => {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+        }
+    };
+
+    onBeforeUnmount(cleanup);
+
+    return {
+        elementsVisible,
+        setElementRef,
+        setupObserver,
+        cleanup
+    };
 }
 

@@ -4,8 +4,8 @@
     <div class="skills-content">
       <div class="skills-left" :class="{ visible: skillsLeftVisible }" ref="skillsLeftRef">
         <div class="skills-subtitle">专业技能</div>
-        <div v-for="skill in majorSkills" 
-             :key="skill.name" 
+        <div v-for="skill in majorSkills"
+             :key="skill.name"
              class="skill-bar-item"
              v-memo="[skill]">
           <div class="skill-bar-label">
@@ -13,13 +13,13 @@
             <span>{{ skill.percent }}%</span>
           </div>
           <div class="skill-bar-bg">
-            <div class="skill-bar-fill" 
+            <div class="skill-bar-fill"
                  :style="{ width: skill.percent + '%', background: skill.color }">
             </div>
           </div>
           <div class="skill-bar-tags" v-if="skill.tags">
-            <span class="skill-tag" 
-                  v-for="tag in skill.tags" 
+            <span class="skill-tag"
+                  v-for="tag in skill.tags"
                   :key="tag.name"
                   :style="{ background: tag.bg, color: tag.color }">
               {{ tag.name }}
@@ -27,36 +27,36 @@
           </div>
         </div>
       </div>
-      
+
       <div class="skills-right" :class="{ visible: skillsRightVisible }" ref="skillsRightRef">
         <div class="skills-subtitle">技术栈</div>
         <!-- PC端 -->
         <div class="tech-stack-grid pc" v-if="!isMobile">
-          <div v-for="(row, rowIdx) in techStackRows" 
-               :key="rowIdx" 
+          <div v-for="(row, rowIdx) in techStackRows"
+               :key="rowIdx"
                class="tech-stack-row"
                v-memo="[row]">
-            <div v-for="(item, idx) in row" 
-                 :key="idx" 
-                 class="tech-stack-item" 
+            <div v-for="(item, idx) in row"
+                 :key="idx"
+                 class="tech-stack-item"
                  :class="{ empty: !item.icon }">
-              <TkIcon v-if="item.icon" 
-                      :icon="item.icon" 
-                      icon-type="svg" 
+              <TkIcon v-if="item.icon"
+                      :icon="item.icon"
+                      icon-type="svg"
                       :size="item.small ? '32px' : '46px'"
-                      :title="item.name" />
+                      :title="item.name"/>
             </div>
           </div>
         </div>
         <!-- 移动端 -->
         <div class="tech-stack-grid mobile" v-else>
-          <div v-for="(item, idx) in mobileTechStackIcons" 
-               :key="idx" 
+          <div v-for="(item, idx) in mobileTechStackIcons"
+               :key="idx"
                class="tech-stack-item">
-            <TkIcon :icon="item.icon" 
-                    icon-type="svg" 
-                    size="32px" 
-                    :title="item.name" />
+            <TkIcon :icon="item.icon"
+                    icon-type="svg"
+                    size="32px"
+                    :title="item.name"/>
           </div>
         </div>
       </div>
@@ -65,10 +65,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { TkIcon } from "vitepress-theme-teek";
-import { useIntersectionObserver } from './useIntersectionObserver';
-import { majorSkills, techStackIcons } from './data';
+import {computed} from 'vue';
+import {TkIcon} from "vitepress-theme-teek";
+import {useIntersectionObserver} from './useIntersectionObserver';
+import {majorSkills, techStackIcons} from './data';
 
 const props = defineProps({
   isVisible: {
@@ -82,8 +82,8 @@ const props = defineProps({
 });
 
 // 使用组合函数创建监听动画
-const { isVisible: skillsLeftVisible, targetRef: skillsLeftRef } = useIntersectionObserver(0.1);
-const { isVisible: skillsRightVisible, targetRef: skillsRightRef } = useIntersectionObserver(0.1);
+const {isVisible: skillsLeftVisible, targetRef: skillsLeftRef} = useIntersectionObserver(0.1);
+const {isVisible: skillsRightVisible, targetRef: skillsRightRef} = useIntersectionObserver(0.1);
 
 // 计算属性优化
 const techStackRows = computed(() => {
@@ -96,8 +96,7 @@ const techStackRows = computed(() => {
 
 // 修复移动端技术栈显示问题
 const mobileTechStackIcons = computed(() => {
-  const filtered = techStackIcons.filter(item => item && item.icon);
-  return filtered;
+  return techStackIcons.filter(item => item && item.icon);
 });
 </script>
 
@@ -288,12 +287,12 @@ const mobileTechStackIcons = computed(() => {
 
   /* 确保PC端在移动端隐藏 */
   .tech-stack-grid.pc {
-    display: none ;
+    display: none;
   }
 
   /* 移动端技术栈网格布局 */
   .tech-stack-grid.mobile {
-    display: grid ;
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.8rem;
     margin-top: 0.8rem;
@@ -315,8 +314,8 @@ const mobileTechStackIcons = computed(() => {
 
   /* 确保图标在移动端正确显示 */
   .tech-stack-item :deep(svg) {
-    width: 42px ;
-    height: 42px ;
+    width: 42px;
+    height: 42px;
   }
 }
 
