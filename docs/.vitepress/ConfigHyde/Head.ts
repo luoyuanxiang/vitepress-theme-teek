@@ -6,6 +6,20 @@ const description = [
 
 // 导出head.ts
 export const HeadData = [
+    // 百度统计
+    [
+        "script",
+        {},
+        `
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?59f3d76f0582adb6d876406429147bb5";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        `
+    ],
     // 添加 51.la 统计脚本
     [
         "script",
